@@ -20,4 +20,4 @@ WORKDIR /marimo/work
 EXPOSE 1357
 
 # Default command
-CMD ["marimo", "edit", "--port 1357", "--headless", "--no-token"]
+CMD ["marimo", "edit", "--host", "0.0.0.0", "--port", "1357", "--headless", "--no-token"]
