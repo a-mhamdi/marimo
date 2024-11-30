@@ -1,0 +1,22 @@
+[completion]
+activate_on_typing = true
+copilot = true
+
+[save]
+autosave = "after_delay"
+autosave_delay = 1000
+format_on_save = false
+
+[keymap]
+preset = "vim"
+
+[runtime]
+auto_instantiate = true
+
+[display]
+theme = "dark"
+
+[experimental]
+
+[server]
+browser = "default"

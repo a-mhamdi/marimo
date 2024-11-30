@@ -10,7 +10,8 @@ ENV PATH="/marimo/.venv/bin":$PATH
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin
 
 WORKDIR /marimo
-COPY requirements.txt requirements.txt
+COPY requirements.txt .
+COPY .marimo.toml .
 RUN uv venv .venv
 RUN uv pip install pip --upgrade
 RUN uv pip install -r requirements.txt --upgrade
