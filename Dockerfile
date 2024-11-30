@@ -11,11 +11,11 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin
 
 WORKDIR /marimo
 COPY requirements.txt .
-COPY .marimo.toml .
 RUN uv venv .venv
 RUN uv pip install pip --upgrade
 RUN uv pip install -r requirements.txt --upgrade
 WORKDIR /marimo/work
+COPY .marimo.toml .
  
 # Expose 1357
 EXPOSE 1357
